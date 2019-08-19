@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab fx:id="registerTab" text="Register">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="39.0" prefHeight="22.0" prefWidth="90.0" text="USERNAME:" />
+                  <TextField fx:id="registerUsernameTxt" layoutX="178.0" layoutY="37.0" prefHeight="26.0" prefWidth="277.0" />
+                  <Label layoutX="55.0" layoutY="106.0" prefHeight="16.0" prefWidth="94.0" text="PASSWORD:" />
+                  <Button fx:id="registerBtn" layoutX="179.0" layoutY="143.0" mnemonicParsing="false" onAction="#register" prefHeight="82.0" prefWidth="278.0" text="REGISTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="registerPasswordTxt" layoutX="179.0" layoutY="101.0" prefHeight="26.0" prefWidth="279.0" />
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab fx:id="loginTab" text="Login">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="39.0" prefHeight="29.0" prefWidth="107.0" text="USERNAME:" />
+                  <Label layoutX="25.0" layoutY="93.0" prefHeight="30.0" prefWidth="101.0" text="PASSWORD:" />
+                  <TextField fx:id="loginUsernameTxt" layoutX="144.0" layoutY="41.0" prefHeight="26.0" prefWidth="319.0" />
+                  <PasswordField fx:id="loginPasswordTxt" layoutX="144.0" layoutY="95.0" prefHeight="26.0" prefWidth="318.0" />
+                  <Button layoutX="145.0" layoutY="184.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="318.0" text="Login">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab fx:id="messagesTab" text="Messages">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="45.0" layoutY="230.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="370.0" text="SEND">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <ComboBox layoutX="436.0" layoutY="41.0" prefWidth="150.0" />
+                  <TextArea layoutX="45.0" layoutY="24.0" prefHeight="200.0" prefWidth="370.0" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="receivedTab" text="Received">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextArea layoutX="12.0" layoutY="56.0" prefHeight="282.0" prefWidth="569.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
