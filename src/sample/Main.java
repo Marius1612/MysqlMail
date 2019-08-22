@@ -13,13 +13,16 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MyMail.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 500, 500));
+        primaryStage.setMinHeight(500);
+        primaryStage.setMinWidth(500);
         primaryStage.show();
     }
 
 
     public static void main(String[] args) {
         CreateDatabases createDatabases = new CreateDatabases();
+
         createDatabases.createDatabase();
         createDatabases.createTable();
         launch(args);

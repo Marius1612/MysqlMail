@@ -34,11 +34,11 @@
          <content>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label layoutX="25.0" layoutY="39.0" prefHeight="29.0" prefWidth="107.0" text="USERNAME:" />
-                  <Label layoutX="25.0" layoutY="93.0" prefHeight="30.0" prefWidth="101.0" text="PASSWORD:" />
+                  <Label fx:id="usernameLoginLbl" layoutX="25.0" layoutY="39.0" prefHeight="29.0" prefWidth="107.0" text="USERNAME:" />
+                  <Label fx:id="passwordLoginLbl" layoutX="25.0" layoutY="93.0" prefHeight="30.0" prefWidth="101.0" text="PASSWORD:" />
                   <TextField fx:id="loginUsernameTxt" layoutX="144.0" layoutY="41.0" prefHeight="26.0" prefWidth="319.0" />
                   <PasswordField fx:id="loginPasswordTxt" layoutX="144.0" layoutY="95.0" prefHeight="26.0" prefWidth="318.0" />
-                  <Button layoutX="145.0" layoutY="184.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="318.0" text="Login">
+                  <Button fx:id="loginBtn" layoutX="145.0" layoutY="184.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="88.0" prefWidth="318.0" text="Login">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -50,13 +50,13 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button layoutX="45.0" layoutY="230.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="370.0" text="SEND">
+                  <Button fx:id="sendBtn" layoutX="45.0" layoutY="230.0" mnemonicParsing="false" onAction="#sendMessqge" prefHeight="68.0" prefWidth="370.0" text="SEND">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <ComboBox layoutX="436.0" layoutY="41.0" prefWidth="150.0" />
-                  <TextArea layoutX="45.0" layoutY="24.0" prefHeight="200.0" prefWidth="370.0" />
+                  <ComboBox fx:id="messagesComboBox" layoutX="436.0" layoutY="41.0" prefWidth="150.0" />
+                  <TextArea fx:id="textAreaMessages" layoutX="45.0" layoutY="24.0" prefHeight="200.0" prefWidth="370.0" />
                </children></AnchorPane>
         </content>
       </Tab>
@@ -64,8 +64,8 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <ComboBox layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
-                  <TextArea layoutX="12.0" layoutY="56.0" prefHeight="282.0" prefWidth="569.0" />
+                  <ComboBox fx:id="receivedComboBox" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextArea fx:id="textAreaReceived" layoutX="12.0" layoutY="56.0" prefHeight="282.0" prefWidth="569.0" />
                </children>
             </AnchorPane>
         </content>

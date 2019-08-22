@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-    public class AddDataInDatabase {
+     class AddDataInDatabase {
 
-        public void addData(String username, String password) {
+        void addData(String username, String password) {
             Connection conn = null;
             Statement stmt = null;
             try{
